@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: rgb(33, 32, 32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    height: 300px;
+    width: 300px;
+
+}
+
+.card img {
+    height: 200px;
+    object-fit: contain;
+    width: 100%;
+    border-radius: 10px;
+    animation: dance 300ms infinite alternate ease-in-out;
+}
+
+.card button {
+    text-align: center;
+    color: white;
+    background-color: crimson;
+    margin: 10px auto;
+    display: block;
+    font-size: 1.2rem;
+    border-radius: 3px;
+    padding: .3rem 2rem;
+    text-transform: uppercase;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    border: none;
+}
+
+.boxes {
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 1rem;
+
+}
+
+
+.action-box.download .action {
+    background: rgb(29, 167, 116);
+
+}
+
+.action-box.notify .action {
+    background: #e18713
+}
+
+
+
+
+.action {
+    width: 50px;
+
+    transition: width 300ms 200ms;
+    overflow: hidden;
+    height: 50px;
+
+    display: grid;
+    grid-template-columns: 50px 100px;
+    gap: 1rem;
+    justify-items: center;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 0 1rem;
+}
+
+
+.action p {
+    font-weight: bold;
+
+}
+
+.action svg {
+    height: 1rem;
+    width: 1rem;
+    display: block;
+
+
+
+}
+
+
+
+
+@media screen and (max-width:800px) {
+    .action {
+    width: 90%;
+
+
+    }
+
+}
+
+@media screen and (min-width:800px) {
+    .action-box:hover .action {
+        width: 170px;
+    }
+    .action-box:hover .action svg {
+        animation: shakeIcon 1s forwards
+    }
+    
+}
+
+@media screen and (max-width:1300px) {
+    .container {
+
+        max-width: 90%
+    }
+}
+
+
+@keyframes shakeIcon {
+    25% {
+        transform: rotate(29deg);
+
+    }
+
+    50% {
+        transform: rotate(-29deg);
+    }
+
+    75% {
+        transform: rotate(29deg);
+
+    }
+
+    100% {
+        transform: rotate(0deg);
+        stroke-width: 3;
+    }
+}
+
+@keyframes dance {
+    from {
+        transform: skewX(-10deg);
+
+    }
+
+    to {
+        transform: skewX(10deg);
+    }
+}
