@@ -84,7 +84,7 @@ self.addEventListener('activate',async() => {
     const action = notification.action
     if(event.action=="confirm"){
     notification.close()
-    event.waitUntil(clients.openWindow('https://stackoverflow.com/questions/62261805/how-to-play-sound-in-service-worker-or-even-vibrate-in-chrome'))
+    event.waitUntil(clients.openWindow('https://practica-pwa-dancecat.vercel.app/'))
         
     }else{
         notification.close()
